@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body{
+	font-family: 'Nunito', sans-serif;
+}
+.back1{
+  background-image: url('src/back.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  height: 100vh!important;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media only screen and (max-width:600px){
+  .back1{
+    animation-name: topanimation;
+    animation-duration: 100000ms;
+    animation-iteration-count: infinite;
+    animation-delay: 100ms;
+  }
+  #navul{
+    display: none;
+  }
+}
+.brandcarousel{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.back2{
+  background-image: url('src/ss.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-clip: border-box;
+}
+.navulopen{
+  /* animation-name: navulopen;
+  animation-duration: 1000ms;
+  animation-delay: 100ms; */
+  right: 0!important;
+}
+.navulclose{
+  animation-name: navulclose;
+  animation-duration: 1000ms;
+  animation-delay: 100ms;
+}
+@keyframes topanimation{
+ 0%{
+   background-position-x: 0px;
+ }
+ 50%{
+   background-position-x: -500px;
+ }
+ 100%{
+   background-position-x: 0px;
+ }
+}
+
+@keyframes navulopen{
+  0%{
+    right: -100%!important;
+  }
+  100%{
+    right:0px!important;
+  }
+}
+@keyframes navulclose{
+  0%{
+    right:0px!important;
+  }
+  100%{
+    right: -100%!important;
+  }
+}
